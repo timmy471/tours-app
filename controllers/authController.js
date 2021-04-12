@@ -85,6 +85,7 @@ exports.protect = catchAsync(async (req, res, next) => {
 exports.restrictTo = (...roles) => {
   return (req, res, next) => {
     console.log(req.user);
+    //req.user.role is gotten from protect middleware
     if (!roles.includes(req.user.role)) {
       console.log(req);
       return next(
