@@ -11,7 +11,7 @@ const sendEmail = async ({...options}) => {
         }
       });
 
-      //Actually send the email
+      //Actually sending the email
     await transporter.sendMail({
           from: "Timmy Micheal <timmy@timmy.com>",
           to: options.email,
